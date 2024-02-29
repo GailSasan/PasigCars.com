@@ -32,7 +32,7 @@ class Home extends BaseController
         ;
     }
 
-    public function user(): string
+    public function users(): string
     {
         $models = model(StudentsModel::class);
         $data = [
@@ -48,7 +48,7 @@ class Home extends BaseController
     }
 
 
-    public function users($id): string
+    public function user($id): string
     {
     $models = model(StudentsModel::class);
     $data = [
@@ -57,7 +57,7 @@ class Home extends BaseController
 
     return view('templates/head')
      .view('templates/header')
-     .view('usersprofile' ,$data)
+     .view('userprofile' ,$data)
      .view('templates/footer');
     }
 
@@ -66,11 +66,44 @@ class Home extends BaseController
     {
         $models = model(StudentsModel::class);
         $models->delUser($id);
-        echo "User Delete";
+        // echo "User Delete";
+        redirect('/users');
     
 
         }
+    public function updateUser(): void{
+        $models = model(StudentsModel::class);
+        $id = $this->input->post('id');
+        $data = [
+            'Fname' => $this->input->post('Fname'),
+            'Lname' => $this->input->post('Lname'),
+            'Course' => $this->input->post('Course'),
+        ];
+        $model->updateUser($id,$data);
+        redirect('/users');
 
+    }
+    public function newUser(): void{
+        $models = model(StudentsModel::class);
+        
+        $data = [
+            'Fname' => $this->input->post('Fname'),
+            'Lname' => $this->input->post('Lname'),
+            'Course' => $this->input->post('Course'),
+        ];
+        $model->insert($id,$data);
+        redirect('/users');
+
+    }
+
+    public function new(): string
+    {
+        return view('templates/head')
+        .view('templates/header')
+         .view('newstudent')
+        .view('templates/footer')
+        ;
+    }
 
 
 }

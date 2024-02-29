@@ -21,8 +21,16 @@ class StudentsModel extends Model
     
 
 public function delUser(int $id){
-    return $this ->delete($id);
+    return $this->delete($id);
 
     }
+public function addnewUser($data){
+    return $this->insert($data);
 
 }
+public function updateUser($id,$data){
+    return $this->update($id,$data);
+
+}
+}
+
