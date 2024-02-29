@@ -62,12 +62,12 @@ class Home extends BaseController
     }
 
 
-    public function deluser($id): void
+    public function deluser($id): object
     {
         $models = model(StudentsModel::class);
         $models->delUser($id);
         // echo "User Delete";
-        redirect('/users');
+        return redirect('users');
     
 
         }
