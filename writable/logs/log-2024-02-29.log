@@ -135,3 +135,42 @@ in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\PasigCars.com\\public\\index.php')
+CRITICAL - 2024-02-29 03:52:18 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\updatestudent.php on line 5.
+ 1 APPPATH\Views\updatestudent.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\PasigCars.com\\app\\Views\\updatestudent.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\PasigCars.com\\app\\Views\\updatestudent.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('updatestudent', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('updatestudent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->updateUserInfo('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\PasigCars.com\\public\\index.php')
+CRITICAL - 2024-02-29 03:54:09 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\updatestudent.php on line 5.
+ 1 APPPATH\Views\updatestudent.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\PasigCars.com\\app\\Views\\updatestudent.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\PasigCars.com\\app\\Views\\updatestudent.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('updatestudent', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('updatestudent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->updateUserInfo('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\PasigCars.com\\public\\index.php')
+CRITICAL - 2024-02-29 03:54:40 --> TypeError: App\Controllers\Home::updateUserInfo(): Return value must be of type object, string returned
+in APPPATH\Controllers\Home.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->updateUserInfo('3')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\PasigCars.com\\public\\index.php')
+CRITICAL - 2024-02-29 03:57:42 --> ErrorException: Undefined variable $model
+in APPPATH\Controllers\Home.php on line 78.
+ 1 APPPATH\Controllers\Home.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'C:\\xampp\\htdocs\\PasigCars.com\\app\\Controllers\\Home.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\PasigCars.com\\public\\index.php')

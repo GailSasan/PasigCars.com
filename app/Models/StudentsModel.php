@@ -9,6 +9,7 @@ class StudentsModel extends Model
     protected $table = 'users ' ;
     
     protected $allowedFields = [
+        'Id',
         'Fname',
         'Lname',
         'Course',

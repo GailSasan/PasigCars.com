@@ -72,8 +72,8 @@ class Home extends BaseController
 
         }
     public function updateUser(): object{
-        $models = model(StudentsModel::class);
-        $id = $this->request->getPost(['id']);
+        $model = model(StudentsModel::class);
+        $id = $this->request->getPost('id');
         $data = $this->request->getPost(['Fname', 'Lname','Course']);
         $model->updateUser($id,$data);
         return redirect('users');
@@ -97,6 +97,18 @@ class Home extends BaseController
          .view('newstudent')
         .view('templates/footer')
         ;
+    }
+    public function updateUserInfo($id): string{
+        $models = model(StudentsModel::class);
+        $data = [
+        'user' => $models->getUser($id) , 
+        'title' =>'Update User Profile'];
+
+        return view('templates/head')
+        .view('templates/header')
+        .view('updatestudent' ,$data)
+        .view('templates/footer');
+
     }
 
 
