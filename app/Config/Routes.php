@@ -17,4 +17,6 @@ $routes->get('/user/(:num)', 'Home::user/$1');
 
 $routes->get('/deluser/(:num)', 'Home::deluser/$1');
 
+
 $routes->get('/new', 'Home::new');
+$routes->post('/newUser', 'Home::newUser');

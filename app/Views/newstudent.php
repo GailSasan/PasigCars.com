@@ -1,4 +1,4 @@
-<h2>Insert Data</h2>
+<h2>new student</h2>
 
 <form method="post" action="/newUser">
     <label for="Fname">First Name:</label>

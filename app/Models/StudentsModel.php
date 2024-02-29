@@ -6,7 +6,14 @@ use CodeIgniter\Model;
 
 class StudentsModel extends Model
 {
-    protected $table = 'users ' ; 
+    protected $table = 'users ' ;
+    
+    protected $allowedFields = [
+        'Fname',
+        'Lname',
+        'Course',
+        
+    ];
 
     public function getAll(){
         return $this ->findAll();

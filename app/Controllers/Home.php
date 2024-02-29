@@ -83,27 +83,30 @@ class Home extends BaseController
         redirect('/users');
 
     }
-    public function newUser(): void{
-        $models = model(StudentsModel::class);
+    public function newUser(): object{
         
-        $data = [
-            'Fname' => $this->input->post('Fname'),
-            'Lname' => $this->input->post('Lname'),
-            'Course' => $this->input->post('Course'),
-        ];
-        $model->insert($id,$data);
-        redirect('/users');
+        $model = model(StudentsModel::class);
+        $data = $this->request->getPost(['Fname', 'Lname','Course']);
+        // $data = [
+        //     'Fname' => $post('Fname'),
+        //     'Lname' => $post('Lname'),
+        //     'Course' => $post('Course'),
+        // ];
+        $model->insert($data);
+        return redirect('users');
 
     }
 
     public function new(): string
     {
+        helper('form');
         return view('templates/head')
         .view('templates/header')
          .view('newstudent')
         .view('templates/footer')
         ;
     }
+
 
 
 }
