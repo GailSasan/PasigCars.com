@@ -15,7 +15,8 @@
     <td><?=$user['Fname'];?></td>
     <td><?=$user['Lname'];?></td>
     <td><?=$user['Course'];?></td>
-    </tr>
+    <td><a href="/user/<?=$user['Id'];?>">edit</a>
+    <a href="/deluser/<?=$user['Id'];?>">Del</a> </td>
 
   
 <?php } ?>

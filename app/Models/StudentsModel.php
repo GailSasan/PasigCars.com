@@ -10,5 +10,19 @@ class StudentsModel extends Model
 
     public function getAll(){
         return $this ->findAll();
+
     }
+
+    public function getUser(int $id){
+        return $this ->find($id);
+
+    }
+
+    
+
+public function delUser(int $id){
+    return $this ->delete($id);
+
+    }
+
 }

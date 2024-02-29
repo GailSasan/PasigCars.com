@@ -32,7 +32,7 @@ class Home extends BaseController
         ;
     }
 
-    public function users(): string
+    public function user(): string
     {
         $models = model(StudentsModel::class);
         $data = [
@@ -46,4 +46,31 @@ class Home extends BaseController
         .view('templates/footer')
         ;
     }
+
+
+    public function users($id): string
+    {
+    $models = model(StudentsModel::class);
+    $data = [
+        'user' => $models->getUser($id) , 
+        'title' =>'User Profile'];
+
+    return view('templates/head')
+     .view('templates/header')
+     .view('usersprofile' ,$data)
+     .view('templates/footer');
+    }
+
+
+    public function deluser($id): void
+    {
+        $models = model(StudentsModel::class);
+        $models->delUser($id);
+        echo "User Delete";
+    
+
+        }
+
+
+
 }
