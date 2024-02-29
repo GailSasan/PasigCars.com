@@ -71,27 +71,19 @@ class Home extends BaseController
     
 
         }
-    public function updateUser(): void{
+    public function updateUser(): object{
         $models = model(StudentsModel::class);
-        $id = $this->input->post('id');
-        $data = [
-            'Fname' => $this->input->post('Fname'),
-            'Lname' => $this->input->post('Lname'),
-            'Course' => $this->input->post('Course'),
-        ];
+        $id = $this->request->getPost(['id']);
+        $data = $this->request->getPost(['Fname', 'Lname','Course']);
         $model->updateUser($id,$data);
-        redirect('/users');
+        return redirect('users');
 
     }
     public function newUser(): object{
         
         $model = model(StudentsModel::class);
         $data = $this->request->getPost(['Fname', 'Lname','Course']);
-        // $data = [
-        //     'Fname' => $post('Fname'),
-        //     'Lname' => $post('Lname'),
-        //     'Course' => $post('Course'),
-        // ];
+      
         $model->insert($data);
         return redirect('users');
 
